@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>GifTastic: Fun with the Giphy API</title>
+    </head>
+    <!--Bootstrap-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!--CSS-->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <!--JQuery-->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha256-pasqAKBDmFT4eHoN2ndd6lN370kFiGUFyTiUHWhU7k8=" crossorigin="anonymous"></script>
+    <!--Javascript-->
+    <script src="assets/js/giftastic.js"></script>
+    <body>
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center">
+                    <h1>Giphy Time</h1> 
+                    <p class="lead">Select a topic below to see some gifs for them. Don't see a topic you like? Add your own with the New Topic form!</p> 
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12 text-center">
+                    <h2>The Topics</h2>
+                    <hr/>
+                </div>
+                <div class="row">
+                    <div class="col-12 text-center">
+                        <div id="topics" class="buttons text-center"></div>
+                    </div>
+                </div>
+            </div>
+            <hr/>
+            <div class="row">
+                <form role="form"> 
+                    <input type="text" class="form-control" id="newTopic" placeholder="New Topic"> 
+                    <button type="submit" id="submit" class="btn btn-primary">Submit</button>                     
+                </form>
+            </div>
+            <div class="row">
+                <div id="gifsAppearHere"></div>
+            </div>
+        </div>                  
+    </body>
+</html>
