@@ -32,7 +32,9 @@ $(document).ready(function () {
 
     // Render GIFS from button click
      // Event listener for all button elements
-     $('#gifButton').on("click", function() {
+     $('.buttons').on("click", function() {
+
+        
         // In this case, the "this" keyword refers to the button that was clicked
         // Assign to window (document) and class not ID
         var query = $(this).attr('.buttons');
