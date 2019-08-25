@@ -57,7 +57,7 @@ $(document).ready(function () {
               // Only taking action if the photo has an appropriate rating
               if (results[i].rating !== "r" && results[i].rating !== "pg-13") {
                 // Creating a div for the gif
-                var gifDiv = $("<div>");
+                var gifDiv = $('<div class="col-md-4">');
   
                 // Storing the result item's rating
                 var rating = results[i].rating;
@@ -66,15 +66,16 @@ $(document).ready(function () {
                 var p = $("<p>").text("Rating: " + rating);
   
                 // Creating an image tag
-                var giphyGif = $("<img>");
+                var giphyGif = $('<img class="rounded float-left">');
   
                 // Giving the image tag an src attribute of a proprty pulled off the
                 // result item
                 giphyGif.attr("src", results[i].images.fixed_height.url);
   
                 // Appending the paragraph and giphyGif we created to the "gifDiv" div we created
-                gifDiv.append(p);
+                
                 gifDiv.append(giphyGif);
+                gifDiv.append(p);
   
                 // Prepending the gifDiv to the "#gifsAppearHere" div in the HTML
                 $("#gifsAppearHere").prepend(gifDiv);
