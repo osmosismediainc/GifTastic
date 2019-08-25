@@ -35,6 +35,7 @@ $(document).ready(function () {
     // Render GIFS from button click
     // Event listener for query buttons
     $(document).on('click', '.gifButton', function () {
+        $('#gifsAppearHere').empty();
         var query = $(this).data("id"); // Grab the data-id from this button
         console.log("Button Query: " + query); // Confirm the setting of the variable
         // Constructing a URL to search Giphy for the name of the person who said the quote
@@ -75,22 +76,12 @@ $(document).ready(function () {
                 gifDiv.append(p);
                 gifDiv.append(giphyGif);
   
-                // Prepending the gifDiv to the "#gifs-appear-here" div in the HTML
+                // Prepending the gifDiv to the "#gifsAppearHere" div in the HTML
                 $("#gifsAppearHere").prepend(gifDiv);
               }
             }
           });
     });
-
-
     // First run of button rendering
     renderButtons();
-
-
-
-
-
-
-
-
 });
