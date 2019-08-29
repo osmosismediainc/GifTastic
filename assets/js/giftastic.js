@@ -48,6 +48,8 @@ $(document).ready(function () {
         })
         // After the data comes back from the API
         .then(function(response) {
+            console.log(response);
+            // 
             // Storing an array of results in the results variable
             var results = response.data;
   
@@ -63,15 +65,15 @@ $(document).ready(function () {
                 var rating = results[i].rating;
   
                 // Creating a paragraph tag with the result item's rating
-                var p = $("<p>").text("Rating: " + rating);
+                var p = $('<div class="d-block">').text("Rating: " + rating);
   
                 // Creating an image tag
-                var giphyGif = $('<img class="rounded float-left">');
+                var giphyGif = $('<img class="rounded">');
   
                 // Giving the image tag an src attribute of a proprty pulled off the
                 // result item
                 giphyGif.attr("src", results[i].images.fixed_height.url);
-  
+                
                 // Appending the paragraph and giphyGif we created to the "gifDiv" div we created
                 
                 gifDiv.append(giphyGif);
